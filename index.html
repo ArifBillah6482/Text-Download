@@ -17,16 +17,17 @@
         display: none;
       }
       .textArea {
-        width: 90%;
-        height: 75vh;
-        margin: 15px;
+        width: 95%;
+        height: 65vh;
+        margin: 10px;
+        margin-top: 5px;
         font-size: 15px;
         padding: 10px;
         border-radius: 5px;
         border: 1px solid black;
       }
       .btn {
-        padding: 20px 100px;
+        padding: 15px 100px;
         margin-left: 50px;
         font-size: 18px;
         cursor: pointer;
@@ -34,16 +35,26 @@
         outline: none;
         border: 1px solid black;
       }
+      .p {
+        margin-left: 15px;
+        color: black;
+        font-size: 18px;
+      }
     </style>
   </head>
   <body>
     <form class="form">
       <textarea class="textArea"></textarea>
+      <div class="p"></div>
+      <br />
       <button type="submit" class="btn">Submit</button>
     </form>
     <script>
       const form = document.querySelector(".form");
       const textArea = document.querySelector(".textArea");
+      document.querySelector(
+        ".p"
+      ).textContent = `<br/><br/><br/><br/><br/><br/><br/>`;
       //
       form.addEventListener("submit", (e) => {
         e.preventDefault();
